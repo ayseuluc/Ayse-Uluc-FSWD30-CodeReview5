@@ -114,33 +114,5 @@ var Persons = [
 ];
 
 
-	
-	var buttoon = document.createElement("button");
-	likeButton.setAttribute("type", "button");
-	likeButton.setAttribute("onclick", "incrementLikes(" + i + ", Persons[" + i + "])");
-	likeButton.appendChild(document.createTextNode("Like"));
-	buttonWrapper.appendChild(likeButton);
-	
-	var nrOfLikes = document.createElement("span");
-	nrOfLikes.setAttribute("id", "person" + i + "_likes");
-	nrOfLikes.appendChild(document.createTextNode(Persons[i].likes));
-	like.appendChild(nrOfLikes);
-	
-	var heart = document.createElement("span");
-	like.appendChild(heart);
-	
-	var heartImage = document.createElement("img");
-	heartImage.setAttribute("src", "img/like.png");
-	heart.appendChild(heartImage);
-	
-	tree.appendChild(container);
-	}
-document.getElementById("profiles").appendChild(tree);
-
-function incrementLikes(index, person){
-	person.likes++;
-	document.getElementById("person" + index + "_likes").innerHTML = person.likes;
-}
-
 
 
